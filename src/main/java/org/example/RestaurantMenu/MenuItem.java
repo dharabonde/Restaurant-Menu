@@ -9,12 +9,24 @@ public class MenuItem {
     private String description;
     private String category;
     private boolean menuItemType;
-    public MenuItem(double price, String description, String category, boolean menuItemType){
+    public MenuItem(String name, double price, String description, String category, boolean menuItemType){
 
+        this.menuName=name;
         this.price=price;
         this.description=description;
         this.category=category;
         this.menuItemType=menuItemType;
+    }
+    public MenuItem(String name, double price, String description, String category) {
+    this(name, price, description, category, false);
+    }
+
+    public String getMenuName() {
+        return menuName;
+    }
+
+    public void setMenuName(String menuName) {
+        this.menuName = menuName;
     }
 
     public double getPrice() {
@@ -46,5 +58,8 @@ public class MenuItem {
     private void setMenuItemType(boolean menuItemType)
     {
         this.menuItemType=menuItemType;
+    }
+    public void printMenuItem(){
+
     }
 }
